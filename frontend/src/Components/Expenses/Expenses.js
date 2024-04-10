@@ -5,7 +5,7 @@ import { InnerLayout } from '../../styles/Layouts';
 import Form from '../Form/Form';
 import IncomeItem from '../IncomeItem/IncomeItem';
 import ExpenseForm from './ExpenseForm';
-
+import '../styles/Expenses.css'
 function Expenses() {
     const {addIncome,expenses, getExpenses, deleteExpense, totalExpenses} = useGlobalContext()
 
@@ -13,7 +13,9 @@ function Expenses() {
         getExpenses()
     }, [])
     return (
-        <ExpenseStyled>
+        // <ExpenseStyled>
+            <div className="expenses">
+
             <InnerLayout>
                 <h1>Expenses</h1>
                 <h2 className="total-income">Total Expense: <span>₹{totalExpenses()}</span></h2>
@@ -41,7 +43,9 @@ function Expenses() {
                     </div>
                 </div>
             </InnerLayout>
-        </ExpenseStyled>
+            </div>
+
+        // {/* </ExpenseStyled> */}
     )
 }
 
